@@ -9,7 +9,7 @@ console.log(num)
 console.log(un)
 console.log(nu)
 //if else
-if(num === 1){
+if(num =="1"){
     console.log("one");
 }
 if(num === "1"){
