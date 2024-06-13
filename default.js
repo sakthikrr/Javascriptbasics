@@ -22,9 +22,4 @@ const logfun =(fname)=>{
     console.log("Arrow function " +fname);
 }
 logfun("test")
-//javascript objects
-const objdata = {
-    name:"test",
-    age:23
-};
-console.log(objdata);
+
