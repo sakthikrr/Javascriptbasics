@@ -1,6 +1,6 @@
 class User{
     constructor(fname,lname){
-        this.fname = fname;
+        this.fname = fname;  
         this.lname = lname;
     }
     getfullname(){
