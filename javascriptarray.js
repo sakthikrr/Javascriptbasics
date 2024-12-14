@@ -19,4 +19,4 @@ console.log("array map");
 console.log(usernames);
 //Array filter
 const activeusers = user.filter(userdata=>userdata.status )
-console.log(activeusers);
+console.log(activeusers);   
