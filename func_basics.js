@@ -3,9 +3,9 @@ basfunc("function before call");
 function basfunc(s){
     console.log(s);
 }
-<<<<<<< HEAD
+
 basfunc("function after call");
-=======
+
 
 basfunc("function after call");
 
