@@ -1,3 +1,10 @@
+userobject = {
+    "id":1,
+    "name":"sakthi",
+    "status":true
+}
+console.log("user object name=",userobject.name);
+
 //Array Map
 const user =[
     {"id":1,"name":"sakthi","status":true},
@@ -11,5 +18,6 @@ console.log("array map");
 console.log(usernames);
 
 //Array filter
-const activeusers = user.filter(userdata=>userdata.status )
+
+const activeusers = user.filter((userdata)=>userdata.status )
 console.log(activeusers);   
