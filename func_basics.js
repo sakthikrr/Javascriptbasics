@@ -25,7 +25,7 @@ const calculate = (a, b) => {
 const numbers = [1, 2, 3];
 const squares = numbers.map(num => num * num);
 console.log(squares); // [1, 4, 9]
-
+//Single line arrow function with wo argument
 const s = (data,data2)=> data-data2;
 console.log(s(5,4));
 
