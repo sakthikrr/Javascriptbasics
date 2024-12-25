@@ -12,7 +12,7 @@ console.log("reverse array",nam_arr.reverse());
 
 //Chek value exist   
 console.log("test2 exist in array =",nam_arr.includes("test2"));
-
+//test
 let arr1 = [1, 2];
 let arr2 = [3, 4];
 let combined = arr1.concat(arr2); 
