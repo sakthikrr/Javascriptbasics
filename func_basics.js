@@ -38,7 +38,8 @@ console.log("sinle line arrow function with one argument with bracket",s(5,4));
 const v = (a,b) => {
     return a+b;
 }
-console.log(v(5,4));
+console.log(v(5,4));  
+
 
 //Arrow function with array
 arr1 = [1,2,3,4,5];
