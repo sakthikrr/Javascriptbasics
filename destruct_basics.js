@@ -57,7 +57,7 @@ const obj = {s:27,w:30};
 console.log(obj);
 
  ({s,w} = obj)
-console.log(s,w);
+console.log(s,w); 
 
 const {openingHours:{mon:{open:op,close:cl}}} = restaurant_data;
 console.log("Monday opening =",op,"close=",cl);
