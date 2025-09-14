@@ -30,3 +30,21 @@ let pass = lfairlines.book("sakthi","A12345");
 const bookEW = lfairlines.book.bind(eurowings);
 let book1 = bookEW("vel","B12345");
 console.log(eurowings.passengerlist);
+
+//Function Closure
+function add(){
+    let counter =0; 
+    return function(){
+        counter++;
+        return counter;
+    }   
+}
+console.log("Function Closure");
+const add1 = add();
+console.log(add1());
+console.log(add1());
+console.log(add1());
+
+const add2 = add();
+console.log(add2());
+console.log(add2());
