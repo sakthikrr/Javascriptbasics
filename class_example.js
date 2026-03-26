@@ -1,4 +1,6 @@
 class Person{
+    //declare private  adultage
+    #adultage = 18;
     constructor(firstname, lastname, age, city){
         this.firstname = firstname;
         this.lastname = lastname;
@@ -17,6 +19,9 @@ class Person{
     
     sayhi(){
         console.log("Hello, my name is " + this.firstname + " " + this.lastname);
+    }
+    isAdult(){
+        return this.age >= this.#adultage;
     }
 }
 emp1 = new Person("John", "Doe", 30, "New York");
@@ -39,7 +44,12 @@ class Studen extends Person{
         console.log("Setting course to: " + course);
         this._course = course;
     }
+    //override isAdult method
+    isAdult(){
+        return this.age >= 21; //students are considered adults at 21
+    }
 }
 let student1 = new Studen("Alice", "Johnson", 22, "Los Angeles", "Computer Science");
 console.log(student1);
 console.log("hi",student1.course);
+console.log("Is student an adult? " + student1.isAdult());
