@@ -1,27 +1,21 @@
-showLoader(true);
+ async function fetchData() 
+    {
+            try {
+                showLoader(true);
+                const userResponse = await axios.get("https://jsonplaceholder.typicode.com/users/1");
+                const user = userResponse.data;
+                displayUserInfo(user);
+                const postsResponse = await axios.get("https://jsonplaceholder.typicode.com/posts?userId=1");
+                const posts = postsResponse.data;
+                displayPosts(posts);
+                const commentsResponse = await axios.get("https://jsonplaceholder.typicode.com/comments?postId=1");
+                const comments = commentsResponse.data;
+                displayComments(comments);
+            } catch (err) {
+                document.getElementById("loading").innerHTML = '<span class="error">' + err + '</span>';    
 
-axios.get("https://jsonplaceholder.typicode.com/users/1")
-    .then(function (response) {
-        var user = response.data;
-        // Display user info
-        displayUserInfo(user);
-    })
-    .then(function () {
-        return axios.get("https://jsonplaceholder.typicode.com/posts?userId=1");   
-    })
-    .then(function (response) {
-        var posts = response.data;
-        // Display posts
-        displayPosts(posts);
-    }).then(function () {
-        return axios.get("https://jsonplaceholder.typicode.com/comments?postId=1");
-    })
-    .then(function (response) {
-        var comments = response.data;
-        // Display comments
-        displayComments(comments);
-    }).catch(function (err) {
-        document.getElementById("loading").innerHTML = '<span class="error">' + err + '</span>';
-    }).finally(function () {
-        showLoader(false);
-    }); 
+            } finally {
+                showLoader(false);  
+            }
+    }
+fetchData();
