@@ -3,7 +3,8 @@ import User, {
   createUser,
   getTeamSize,
   getTeamIntroductions,
-} from "./basic_export.js";
+  is_authenticated,
+} from "./auth_export.js";
 
 const newUser = new User("Ravi", "Full Stack Developer");
 const createdUser = createUser("Priya", "Project Manager");
@@ -17,3 +18,4 @@ team.forEach((member) => {
 });
 
 console.log(getTeamIntroductions());
+console.log(`Authenticated: ${is_authenticated()}`);
